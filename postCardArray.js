@@ -85,21 +85,36 @@ const postcardArray = [
 ]
 
 
-    for (const iterator of postcardArray) {
-        console.log(iterator.id, ':', iterator.name);
-    }
+    // for (const iterator of postcardArray) {
+    //     console.log(iterator.id, ':', iterator.name);
+    // }
 
-    for (const iterator of postcardArray) {
-        for (const asdfg of iterator.postcardList) {
-            console.log(asdfg.id, ':', asdfg.text);
-        }
-    }
+    // for (const iterator of postcardArray) {
+    //     for (const asdfg of iterator.postcardList) {
+    //         console.log(asdfg.id, ':', asdfg.text);
+    //     }
+    // }
 
-    for (const iterator of postcardArray) {
-        if (iterator.id == 7)
-        for (const asdfg of iterator.postcardList) {
+    // for (const iterator of postcardArray) {
+    //     if (iterator.id == 7)
+    //     for (const asdfg of iterator.postcardList) {
         
-            console.log(asdfg.id, '-',  asdfg.text);
-        }
-    }
+    //         console.log(asdfg.id, '-',  asdfg.text);
+    //     }
+    // }
 
+
+    
+      let temp = [];
+      const newArray = postcardArray.map((elements) => {   ///1 4 7
+      let obj = Object.assign({
+        id : elements.id,
+        name : elements.name,
+        // list : postcardList,
+      })
+      
+      temp.push(obj);
+      });
+      console.log(temp)
+    
+    
