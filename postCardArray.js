@@ -105,6 +105,7 @@ const postcardArray = [
 
     let catalog = [];
     let subCatalog = [];
+    let colleges = [];
     const newArray = postcardArray.map((elements) => {   ///1 4 7
         let obj = Object.assign({
           id : elements.id,
@@ -120,7 +121,7 @@ const postcardArray = [
             subCatalog.push(list);
 
             if(elements.id == 7) {
-                
+                colleges.push(list);
             }
         })    
     
@@ -132,3 +133,7 @@ const postcardArray = [
 
     console.log(`посткард листы с id i name(текст):`);
     console.log(subCatalog);
+
+    console.log(`категория "коллеги":`);
+    console.log(colleges);
+
